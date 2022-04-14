@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
 import express from "express";
 
-
 // promises style - new since version 3
 
 const app = express();
@@ -34,4 +33,4 @@ app.use("/", (req, res, next) => {
   return res.render("index");
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
